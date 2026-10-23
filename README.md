@@ -54,7 +54,7 @@ The output is static, so any static host works. Deploy the contents of this `por
 
 **GitHub Pages** (current deployment: <https://hassanfcs.github.io/my-portfolio/>)
 1. This folder is the root of the `HassanFCS/my-portfolio` repository.
-2. Settings → Pages → Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
+2. Settings → Pages → Source: *GitHub Actions*. The workflow in `.github/workflows/pages.yml` deploys on every push to `main`. (*Deploy from a branch* with `main` / root also works.)
 3. Rebuild with `SITE_URL=https://hassanfcs.github.io/my-portfolio node build.js` before pushing so meta tags point at the live URL. All asset links are relative, so the site also works at a custom domain or a user-site URL after a rebuild.
 
 **Netlify**: drag-and-drop the folder in the Netlify UI, or connect the repo with publish directory `portfolio` and no build command.
